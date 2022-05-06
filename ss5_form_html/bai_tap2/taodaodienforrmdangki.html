@@ -1,10 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        label {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: inherit;
+        }
+        input[type="text"] {
+            border-color: #f7f1f1;
+            border-radius: 3px;
+            height: 24px;
+        }
+        .box{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+        <div class="box">
+            <label for="">Email:</label><br>
+            <input type="text" name = "email"><br>
+        </div>
+        <div class="box">
+            <label for="">Họ Và Tên:</label><br>
+            <input type="text" name = "name"><br>
+        </div>
+        <div class="box">
+            <label for="">Số Điện Thoại:</label><br>
+            <input type="tel" name = "phone"><br>
+        </div>
+        <div class="box">
+            <label for="">Giới Tính:</label><br>
+            <input type="radio" name = "gioitinh">Nam
+            <input type="radio" name = "gioitinh">Nữ<br>
+        </div>
+        <div class="box">
+            <button type="submit">Đăng ký</button>
+        </div>
+    </form>
 </body>
 </html>

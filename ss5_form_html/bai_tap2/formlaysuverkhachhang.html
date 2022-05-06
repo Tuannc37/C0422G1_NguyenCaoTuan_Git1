@@ -1,10 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-top: 10px;
+        }
+        .coll_color{
+            background-color: #dddddd;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        .form_checkbox{
+          width: 400px;
+        }
+        #usd{
+            width: 100px;
+        }
+        #cent{
+            width: 50px;
+        }
+        span.dollars {
+            margin-left: 47px;
+        }
+        span.cent {
+            margin-left: 34px;
+        }
+        label {
+            font-size: 17px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+    <div class="box">
+        <label for="">What is your age range?</label><br>
+        <select class ="form_checkbox" name = "age">
+            <option value = "Maths" >18-24</option>
+            <option value = "Maths" >25-34</option>
+            <option value = "Physics">35-50</option>
+            <option value = "Physics">50+</option>
+        </select>
+    </div>
+    <div class="box">
+        <label for="">What is your yearly income range?</label><br>
+        <select class ="form_checkbox" name = "age">
+            <option value = "Maths" >$0 - $25.000</option>
+            <option value = "Maths" >$25.001 - $50.000</option>
+            <option value = "Physics">$50.001 - $1000</option>
+        </select>
+    </div>
+    <div class="box">
+        <label for="">Gender Identity</label><br>
+        <input type="radio" name = "gioitinh">Male<br>
+        <input type="radio" name = "gioitinh">Female<br>
+        <input type="radio" name = "gioitinh">Nonbinary<br>
+    </div>
+    <div class="box">
+        <label for="">Which of the following products have your purchased in the last 2 months. Please check all that apply.</label><br>
+        <input type="checkbox" name = "product">Product 1<br>
+        <input type="checkbox" name = "product">Product 2<br>
+        <input type="checkbox" name = "product">Product 3<br>
+    </div>
+    <div class="box">
+        <label for="">How often would you use our new product?</label><br>
+        <input type="radio" name = "product">Product 1<br>
+        <input type="radio" name = "product">Product 2<br>
+        <input type="radio" name = "product">Product 3<br>
+    </div>
+    <div class="box">
+        <label for="">What would you pay for the new product?</label><br>
+        <label for=""><span>$</span></label>
+        <input id = "usd" type="text"><span>.</span><input id="cent" type="text"><br>
+        <span class = "dollars">Dollars</span>
+        <span class = "cent">Cents</span>
+    </div>
+    <div class="box">
+        <label for="">What would you pay for the new product?</label><br>
+        <textarea rows = "5" cols = "50" name = "description"></textarea>
+    </div>
+    <div class="box">
+        <label for="">What would you pay for the new product?</label>
+        <table cellpadding="5">
+            <tr>
+                <th class = "coll_color">Company</th>
+                <th class = "coll_color">Contact</th>
+                <th class = "coll_color">Country</th>
+                <th class = "coll_color">Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td><input  name = "true" type="radio"><br><span>1</span></td>
+                <td><input name = "true" type="radio"><br><span>2</span></td>
+                <td><input name = "true" type="radio"><br><span>3</span></td>
+            </tr>
+            <tr>
+                <td class = "coll_color">Company</td>
+                <td class = "coll_color"><input name = "true" type="radio"><br><span>1</span></td>
+                <td class = "coll_color"><input name = "true" type="radio"><br><span>2</span></td>
+                <td class = "coll_color"><input name = "true" type="radio"><br><span>3</span></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><input name = "true" type="radio"><br><span>1</span></td>
+                <td><input name = "true" type="radio"><br><span>1</span></td>
+                <td><input name = "true" type="radio"><br><span>1</span></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

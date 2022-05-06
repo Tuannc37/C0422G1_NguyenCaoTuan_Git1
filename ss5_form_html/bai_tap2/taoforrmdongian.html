@@ -1,10 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 1000px;
+            background-color: #d5feff;
+        }
+        .form_one{
+            width: 80%;
+            height: 400px;
+            background-color: #f7f1f1;
+            margin: auto;
+        }
+        .menu{
+            height: 40px;
+            background-color: #ff4c00;
+            color: white;
+            text-align: center;
+            margin: 20px 10px;
+        }
+        .box{
+            margin-top: 20px;
+        }
+        .nav_form{
+            margin-left: 300px;
+        }
+        input[type="text"] {
+            border-color: #f7f1f1;
+            border-radius: 3px;
+            height: 24px;
+        }
+        label {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: monospace;
+            color: #7786d1;
+        }
+        td{
+            color: red;
+        }
+        button {
+            width: 103px;
+            height: 28px;
+            background-color: #f1e1e1;
+            border-radius: 10px;
+            border-color: #e7dbdb;
+        }
+
+        .form_two{
+            width: 80%;
+            height: 450px;
+            background-color: #fffda9;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .box2{
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+        .menu2{
+            height: 40px;
+            background-color: #7786d1;
+            color: white;
+            text-align: center;
+            margin: 20px 10px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <div class="form_one">
+            <div class="menu">
+                <h1>SỞ THÍCH CỦA BẠN</h1>
+            </div>
+            <div class="nav_form">
+                <form action="">
+                    <div class="box">
+                        <label for="">Họ Và Tên:</label>
+                        <input type="text" name = "name"><br>
+                    </div>
+                    <div class="box">
+                        <label for="">Email:</label>
+                        <input type="text" name = "email"><br>
+                    </div>
+                    <div class="box">
+                        <label for="">Sở Thích</label>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name = "sothich">Thể thao</td>
+                                <td><input type="checkbox" name = "sothich">Âm nhạc</td>
+                                <td><input type="checkbox" name = "sothich">Đọc sách<br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name = "sothich">Lướt web</td>
+                                <td> <input type="checkbox" name = "sothich">Chơi game<br></td>
+                                <td><input type="checkbox" name = "sothich">Xem phim</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name = "sothich">Du lịch</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="box">
+                        <button type="submit">Gửi thông tin</button>
+                        <button type="reset">Nhập lại</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form_two">
+            <div class="menu2">
+                <h1>ĐĂNG KÍ HỌC VIÊN</h1>
+            </div>
+            <div class="box2 id = "form_name">
+                <label for="">Họ Và Tên</label>
+                <input type="text" name = "name"><br>
+            </div>
+            <div class="box2">
+                <label for="">Ngày Sinh</label>
+                <input type="text" name = "name"><br>
+            </div>
+            <div class="box2">
+                <label for="">Giới Tính</label>
+                <input type="radio" name = "gioitinh">Nam
+                <input type="radio" name = "gioitinh">Nữ<br>
+            </div>
+            <div class="box2">
+                <label for="">Địa Chỉ</label>
+                <input type="text" name = "diachi"><br>
+            </div>
+            <div class="box2">
+                <label for="">Lớp</label>
+                <select name = "Chonlop">
+                    <option value = "Maths" >-Chọn lớp-</option>
+                    <option value = "Maths" >Lớp 1</option>
+                    <option value = "Physics">Lớp 2</option>
+                    <option value = "Physics">Lớp 3</option>
+                    <option value = "Physics">Lớp 4</option>
+                </select>
+            </div>
+            <div class="box2">
+                <label for="">Email</label>
+                <input type="email" name = "name"><br>
+            </div>
+            <div class="box2">
+                <label for="">Điện thoại</label>
+                <input type="tel" name = "name"><br>
+            </div>
+            <div class="box2">
+                <button type="submit">Gửi thông tin</button>
+                <button type="reset">Nhập lại</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
