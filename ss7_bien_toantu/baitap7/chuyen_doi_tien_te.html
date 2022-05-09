@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            float: left;
+            margin-right: 30px;
+        }
+        #box_button{
+            margin-top: 16px;
+        }
+        label {
+            font-size: 20px;
+            font-weight: 800;
+            color: royalblue;
+        }
+        select, input#input{
+            height: 25px;
+        }
+
+        select{
+            color: royalblue;
+        }
+        button {
+            height: 30px;
+            background-color: #efe4e4;
+            border-radius: 5px;
+            color: royalblue;
+        }
+        h2{
+            color: royalblue;
+            margin-top: 20px;
+        }
+        span{
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="box">
+            <label for="input">Amount</label><br>
+            <input type="text" id="input"><br>
+        </div>
+        <div class="box">
+            <label for="from">From Currency</label><br>
+            <select name="" id="from">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+            </select><br>
+        </div>
+        <div class="box">
+            <label for="to">To Currency</label><br>
+            <select name="" id="to">
+                <option value="23000">USD</option>
+                <option value="1">VND</option>
+            </select><br>
+        </div>
+        <div class="box" id ="box_button">
+            <button type = "button" onclick="display()">Convert</button>
+        </div>
+        <div class="box">
+            <h2> Result: <span id="result"></span></h2>
+        </div>
+        <script>
+            function display() {
+                let input = parseInt(document.getElementById("input").value)
+                let from = parseInt(document.getElementById("from").value)
+                let to = parseInt(document.getElementById("to").value)
+                document.getElementById("result").innerText = (input * from / to).toFixed(4)
+            }
+        </script>
+    </form>
+</body>
+</html>
