@@ -1,10 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+    <script>
+        let i = 10;
+        let f = 20.5;
+        let b = true;
+        let s = 'Hà Nội';
+        let width = 20;
+        let height = 10;
+        document.write('i = ' + i);
+        document.write('<br/>');
+        document.write('f = ' + f);
+        document.write('<br/>');
+        document.write('b = ' + b);
+        document.write('<br/>');
+        document.write('s = ' + s);
+        document.write("</br>");
+
+        let area = width * height;
+        document.write('Area = ' + area);
+
+        let x;
+        x = prompt("Nhập vào số a: ", " ");
+        x = parseInt(x);
+        let y;
+        y = prompt("Nhập vào số b: ", " ");
+        y = parseInt(y);
+        if(x % y == 0){
+            alert("x là bội số của y");
+        }
+        else
+            alert("x không phải là bội số của y");
+    </script>
 </body>
 </html>
