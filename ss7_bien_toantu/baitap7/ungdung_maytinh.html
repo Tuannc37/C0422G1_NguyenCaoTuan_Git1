@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" id = "num1">
+        <input type="text" id = "num2"><br>
+        <button type = "button" id = "tong" onclick="sum()">Tổng</button>
+        <button type = "button" id = "hieu" onclick="brand()">Hiệu</button>
+        <button type = "button" id = "tich" onclick="multiplication()">Tích</button>
+        <button type = "button" id = "thuong" onclick="division()">Thương</button>
+        <h2> Kết quả: <span id="result"></span></h2>
+        <script>
+            function sum(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let sum = parseInt(a) + parseInt(b);
+                document.getElementById('result').innerHTML = sum;
+            }
+            function brand(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let brand = parseInt(a) - parseInt(b);
+                document.getElementById('result').innerHTML = brand;
+            }
+            function multiplication(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let multiplication = parseInt(a) * parseInt(b);
+                document.getElementById('result').innerHTML = multiplication;
+            }
+            function division(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let division = parseInt(a) / parseInt(b);
+                document.getElementById('result').innerHTML = division.toFixed(1);
+            }
+        </script>
+    </form>
+</body>
+</html>
