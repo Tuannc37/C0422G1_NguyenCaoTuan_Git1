@@ -12,7 +12,10 @@
         let banKinh = prompt("Nhập vào bán kính đường tròn: ");
         banKinh = Number(banKinh);
         let dienTichHinhTron = (Math.PI) * banKinh * banKinh;
+        let chuViHinhTron = 2 * banKinh * (Math.PI);
         document.write("Dien tíh hình tròn là: " +dienTichHinhTron.toFixed(1));
+        document.write("<br>");
+        document.write("Chu vi hình tròn là: " + chuViHinhTron.toFixed(1));
     </script>
 </body>
 </html>
