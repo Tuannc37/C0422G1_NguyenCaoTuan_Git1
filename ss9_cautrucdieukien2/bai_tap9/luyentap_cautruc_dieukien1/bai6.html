@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let bill = parseInt(prompt("Nhập vào hóa đơn khách hàng : "));
+        let bonus = 0;
+        if(bill > 500000){
+            bonus = (bill * 10)/100;
+        }
+        else if(bill > 200000){
+            bonus = (bill * 5)/100;
+        }
+        else{
+            bonus = (bill * 2)/100;
+        }
+        document.write("Số hoa hồng nhân viên nhận được là: " + bonus + " " + "VND");
+    </script>
+</body>
+</html>
