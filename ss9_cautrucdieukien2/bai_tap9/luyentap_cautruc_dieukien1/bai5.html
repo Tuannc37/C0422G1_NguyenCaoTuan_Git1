@@ -6,7 +6,24 @@
 </head>
 <body>
     <script>
-        
+        let diemBaiKiemTra = parseInt(prompt("Nhập vào điểm bài kiểm tra : "));
+        let diemGiuaKi = parseInt(prompt("Nhập vào điểm giữa kì: "));
+        let diemCuoiKi = parseInt(prompt("Nhập vào điểm cuối kì: "));
+        let diemTrungBinh = (diemBaiKiemTra + diemGiuaKi * 2 + diemCuoiKi * 3)/6;
+        document.write("Điểm trung bình của học sinh là: " + diemTrungBinh.toFixed(2));
+        document.write("<br>");
+        if(diemTrungBinh >= 8){
+            document.write("Xếp loại giỏi");
+        }
+        else if(diemTrungBinh >= 6.5){
+            document.write("Xếp loại khá");
+        }
+        else if(diemTrungBinh >= 5){
+            document.write("Xếp loại trung bình");
+        }
+        else {
+            document.write("Xếp loại yếu");
+        }
     </script>
 </body>
 </html>
