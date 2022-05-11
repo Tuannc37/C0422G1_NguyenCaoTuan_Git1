@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let soPhut = parseInt(prompt("Nhập vào số phút đã gọi"));
+        let phi = 0;
+        let tong;
+        const PHICODINH = 25;
+        if(soPhut > 200){
+            phi = (soPhut - 200)*200 + 150*400 + 50*600
+        }
+        else if(soPhut > 50){
+            phi = (soPhut - 50)*400 + 50*600;
+        }
+        else{
+            phi = soPhut * 600;
+        }
+
+        tong = phi * 0.01 + PHICODINH;
+        document.write("Cước điện thoại là: " + phi);
+    </script>
+
+</body>
+</html>
