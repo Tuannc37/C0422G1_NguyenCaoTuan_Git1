@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin-top: 20px;
+            font-size: 30px;
+            color: red;
+            width: 300px;
+            text-align: center;
+            background-color: aquamarine;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input">
+        <button type = "button" onclick="display()">Tính số ngày</button>
+        <div class="box">
+            <span id="result"></span>
+        </div>
+    </form>
+    <script>
+        function display() {
+            let input = parseInt(document.getElementById("input").value)
+            switch (input) {
+                case 1:
+                    document.getElementById("result").innerText = "Tháng một có 31 ngày";
+                    break;
+                case 2:
+                    document.getElementById("result").innerText = "Tháng hai có 28 hoặc 29 ngày";
+                    break;
+                case 3:
+                    document.getElementById("result").innerText = "Tháng ba có 31 ngày";
+                    break;
+                case 4:
+                    document.getElementById("result").innerText = "Tháng tư có 30 ngày";
+                    break;
+                case 5:
+                    document.getElementById("result").innerText = "Tháng năm có 31 ngày";
+                    break;
+                case 6:
+                    document.getElementById("result").innerText = "Tháng sáu có 30 ngày";
+                    break;
+                case 7:
+                    document.getElementById("result").innerText = "Tháng bảy có 31 ngày";
+                    break;
+                case 8:
+                    document.getElementById("result").innerText = "Tháng tám có 31 ngày";
+                    break;
+                case 9:
+                    document.getElementById("result").innerText = "Tháng chín có 30 ngày";
+                    break;
+                case 10:
+                    document.getElementById("result").innerText = "Tháng mười có 31 ngày";
+                    break;
+                case 11:
+                    document.getElementById("result").innerText = "Tháng mười một có 30 ngày";
+                    break;
+                case 12:
+                    document.getElementById("result").innerText = "Tháng mười hai có 31 ngày";
+                    break;
+                default: document.getElementById("result").innerText = "Bạn nhập không đúng.Vui lòng nhập lại!";
+            }
+        }
+    </script>
+</body>
+</html>
