@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let kw = parseInt(prompt("Nhập số kW tiêu thụ "));
+        let money = 0;
+        if (kw <= 100){
+            money = kw * 500;
+        }
+        else if(kw <= 250){
+            money += ( kw - 100 ) * 300;
+        }
+        else if(kw <= 350){
+            money += ( kw - 250 ) * 200;
+        }
+        else {
+            money += ( kw - 350 ) * 500;
+        }
+        document.write("Giá điện là : " + money);
+    </script>
+
+</body>
+</html>
