@@ -6,7 +6,46 @@
 </head>
 <body>
     <script>
-
+        function draw_heart(side) {
+            let col, line;
+            let h = (side + 1) / 2;
+            for (col = 1; col <= side; col++) {
+                if (Math.abs(h - col) > 0 && Math.abs(h - col) < (side - 1) / 2) {
+                    document.write(" * ");
+                }
+                else {
+                    document.write(" &nbsp&nbsp ");
+                }
+            }
+            document.write("<br>");
+            for (col = 1; col <= side; col++) {
+                if (Math.abs(h - col) >= 0 && Math.abs(h - col) <= (side - 1) / 2) {
+                    document.write(" * ");
+                }
+                else {
+                    document.write(" &nbsp&nbsp ");
+                }
+            }
+            document.write("<br>");
+            for (line = 1; line <= side - 3; line++) {
+                for (col = 1; col <= side; col++) {
+                    if (Math.abs(h - col) >= 0 && Math.abs(h - col) <= (side - 1) / 2 + 1 - line) {
+                        document.write(" * ");
+                    }
+                    else {
+                        document.write(" &nbsp&nbsp ");
+                    }
+                }
+                document.write("<br>");
+            }
+        }
+        let side = parseInt(prompt("Nhập vào cạnh hình vuông "));
+        if (side <= 0) {
+            document.write("Nhap sai! Xin vui long nhap lai!");
+        }
+        else {
+            draw_heart(side);
+        }
     </script>
 </body>
 </html>
