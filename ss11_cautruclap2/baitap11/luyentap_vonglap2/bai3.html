@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let number = parseInt(prompt("Nhap vao chieu cao"));
+        for(i = 0; i < number; i++) {
+            for(j = 0; j <= i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+
+
+        document.write("<br>");
+        document.write("<br>");
+        for(i = number; i >= 0; i--) {
+            for(j = 0; j < i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        for(i = 1; i <= number; i++) {
+            for(j = 1; j <= number; j++) {
+                if(j <= (number - i)){
+                    document.write(" &nbsp&nbsp ");
+                }
+                else{
+                    document.write(" * ");
+                }
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        for(i = 0; i < number; i++) {
+            for(j = 0; j < i; j++) {
+                document.write(" &nbsp&nbsp ");
+            }
+            for(j = i;j < number;j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>

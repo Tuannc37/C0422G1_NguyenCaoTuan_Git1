@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanSo()">Bắt đầu</button>
+<script>
+    function doanSo() {
+        let numberMax = parseInt(prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?'));
+        let numberRandom = Math.floor(Math.random() * numberMax);
+        console.log(numberRandom);
+        let number = prompt('Nhập số bạn đoán');
+        for (let i = 0; i <= 3; i++) {
+            if(i == 3){
+                alert('Bạn đã hết số lần đoán');
+            }
+            if (number == numberRandom) {
+                alert('Bạn đoán đúng rồi!');
+                break;
+            } else if (number > numberRandom) {
+                    number = prompt('Số bạn đoán lớn hơn, hãy đoán lại');
+            }
+            else {
+                    number = prompt('Số bạn đoán bé hơn, hãy đoán lại');
+            }
+        }
+    }
+</script>
+</body>
+</html>

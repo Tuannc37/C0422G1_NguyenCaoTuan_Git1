@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let tienGui = parseInt(prompt("Nhập vào số tiền gủi "));
+        let laiSuat = parseInt(prompt("Nhập vào tỉ lệ lãi suất"));
+        let soNam = parseInt(prompt("Nhập vào số năm gửi "));
+        let tienLai = 0;
+        for(let i = 1;i <= soNam; i++){
+            tienLai = laiSuat * tienGui/100;
+            tienGui += tienLai;
+        }
+        document.write("Số tiền lãi nhận được theo số năm là : " + tienLai.toFixed(2));
+    </script>
+</body>
+</html>
