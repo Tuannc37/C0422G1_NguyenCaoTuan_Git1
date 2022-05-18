@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let soLuong = parseInt(prompt("Nhap số lượng phần tử của mảng"));
+        for (let i = 0; i < soLuong; i++) {
+            let number = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) + ' vào mảng '));
+            arr.push(number)
+        }
+        document.write("Mảng gốc " + arr + "<br>")
+        for(let j = 0;j <= arr.length/2;j++) {
+            let temp = arr[j];
+            arr[j] = arr[arr.length - 1 - j];
+            arr[arr.length - 1 - j] = temp;
+        }
+        document.write("Mảng đảo ngược " + arr);
+    </script>
+</body>
+</html>

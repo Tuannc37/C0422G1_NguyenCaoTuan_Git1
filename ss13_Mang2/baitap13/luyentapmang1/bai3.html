@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let number = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) + ' vào mảng '));
+        arr.push(number)
+    }
+    console.log(arr)
+    let j;
+    let maxValue, viTri;
+    maxValue = arr[0];
+    let sum = 0;
+    for(j = 0; j < arr.length; j++){
+        sum += arr[j];
+        if(arr[j] > maxValue){
+            maxValue = arr[j];
+            viTri = j;
+        }
+    }
+    console.log("Giá trị lớn nhất trong mảng là " + maxValue);
+    console.log("giá trị trung bình các phần tử trong mảng là : " + sum / (arr.length));
+</script>
+</body>
+</html>
