@@ -7,7 +7,6 @@
 <body>
     <script>
         function nhapMang(arr, n){
-            arr =[];
             for(let j = 0; j < n;j ++){
                 let a = prompt('Nhập phần tử thứ ' + (j + 1) + ' vào mảng')
                 arr.push(a);
@@ -22,7 +21,7 @@
             }
             return arr;
         }
-        let arr =[]
+        let arr =[];
         let n = parseInt(prompt("Nhập vào số lượng phần tử "));
         nhapMang(arr,n);
         daoMang(arr);
