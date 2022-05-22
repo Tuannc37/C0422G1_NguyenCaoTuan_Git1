@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiemTra(string) {
+            if(((string>='A')&&(string<='Z'))||((string>='a')&&(string<='z'))){
+                return true;
+            }
+            else return false;
+        }
+        let str = prompt("Nhập vào");
+        if(kiemTra(str)){
+            document.write("Chuỗi nhập vào là kí tự");
+        }
+        else  document.write("Chuỗi nhập vào không phải là kí tự");
+    </script>
+</body>
+</html>

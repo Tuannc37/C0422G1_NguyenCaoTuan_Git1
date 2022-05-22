@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="string">Ngôi Sao </label>
+<input type="text" name="" id="string">
+<button onclick="transcript()">Chòm Sao</button>
+<p id="result"></p>
+<script>
+    function transcript() {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let string = document.getElementById("string").value;
+        let viTri = 0;
+        let result = "";
+        for (let i = 0; i < arr1.length; i++) {
+            if (string == arr1[i]) {
+                viTri = i;
+                for (let j = 0; j < arr2.length; j++) {
+                    if (viTri == j) {
+                        result = arr2[j];
+                        return result;
+                    }
+                    else{
+                        result = "Không tìm thấy chòm sao";
+                        return result;
+                    }
+                }
+            }
+            else{
+                result = "Không tìm thấy chòm sao";
+                return result;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

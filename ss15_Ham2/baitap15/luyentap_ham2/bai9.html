@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function nhapMang(arr, n){
+            arr =[];
+            for(let j = 0; j < n;j ++){
+                let a = prompt('Nhập phần tử thứ ' + (j + 1) + ' vào mảng')
+                arr.push(a);
+            }
+            document.write("mảng vừa nhập là " + arr + "<br>");
+        }
+        function kiemTra(arr ,str) {
+            let count = 0;
+            for(let i = 0; i < arr.length; i++){
+                if(str == arr[i]){
+                    count++;
+                }
+            }
+            if (count>0) return count;
+            else return -1;
+        }
+        let arr = [];
+        let number = parseInt(prompt("Nhập vào số lượng phần tử mảng"));
+        nhapMang(arr,number);
+        let str = prompt("Nhập vào kí tự bất kì");
+        document.write("Kết quả " + kiemTra(arr,str));
+
+    </script>
+</body>
+</html>

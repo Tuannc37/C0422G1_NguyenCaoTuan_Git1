@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhap vao mot chuo bat ki");
+        let kiTu = prompt("Nhap vao ki tu bat ki")
+        let count = 0;
+        let flag = true;
+        for(let i = 0; i < str.length; i++){
+            if(kiTu == str[i]){
+                flag = true;
+                count ++;
+            }
+            else{
+               flag = false;
+            }
+        }
+        if(flag){
+            document.write("Kí tự nhập vào có trong chuỗi <br>");
+            document.write("số lần xuất hiện kí tự trong chuỗi là " + count);
+        }
+        else{
+            document.write("Kí tự nhập vào không có trong chuỗi <br>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let number = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+        for(let i = 0;i < number; i++){
+            let str = prompt('Nhập phần tử thứ ' + (i + 1) + ' vào mảng')
+            arr.push(str);
+        }
+        document.write("Mảng bạn vừa nhập là " + arr +"<br>");
+        arr.sort();
+        document.write("Mảng sau khi sắp xếp là " + arr +"<br>");
+        let count = 1;
+        for(let j = 0;j < arr.length; j++){
+            if (arr[j] == arr[j+1]){
+                count++;
+            }
+            else{
+                document.write("Phan tu " +arr[j]+ " xuat hien" +count+ " lan <br>");
+                count = 1;
+            }
+        }
+        document.write("Phan tu " +arr[j]+ " xuat hien" +count+ " lan <br>");
+
+    </script>
+</body>
+</html>

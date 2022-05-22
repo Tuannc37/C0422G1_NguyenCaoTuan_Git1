@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let number = parseInt(prompt("Nhap vao so luong phan tu mang"));
+        for(let i = 0; i < number; i++){
+            let str = +prompt('Nhập phần tử thứ ' + (i + 1) + 'vào mảng');
+            arr.push(str);
+        }
+        document.write("Mang vua nhap la  "+ arr + "<br>");
+        let sum = 0;
+        for(let j = 0;j < arr.length; j++){
+           sum = arr[j] + arr[j+1];
+           if(sum == 20){
+               arr[j] = arr[j+1] = sum;
+           }
+        }
+        document.write("Mang sau khi thay đối "+ arr);
+
+    </script>
+</body>
+</html>

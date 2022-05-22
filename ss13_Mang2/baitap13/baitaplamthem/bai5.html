@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function isPrimeNumber(n) {
+            if (n < 2) {
+                return false;
+            } else {
+                for (let i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        function fibonacci(n) {
+            if (n < 0) {
+                return false;
+            } else if (n == 0 || n == 1) {
+                return n;
+            } else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        }
+
+        let j = 0;
+        while (fibonacci(j) < 100000) {
+            let fi = fibonacci(j);
+            if (isPrimeNumber(fi)) {
+                document.write(fi + "<br>");
+            }
+            j++;
+        }
+    </script>
+</body>
+</html>

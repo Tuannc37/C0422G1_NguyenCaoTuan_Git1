@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function footToMeter(foot){
+            let meter = 0.305 * foot;
+            document.write("So meter doi ra duoc la " + meter.toFixed(2) + "<br>");
+        }
+        function meterToFoot(meter){
+            let foot = 3.279 * meter;
+            document.write("So foot doi ra duoc la " + foot.toFixed(2) + "<br>");
+        }
+        let foot = parseInt(prompt("Nhập vào food "));
+        footToMeter(foot);
+        let meter = parseInt(prompt("Nhập vào meter "));
+        meterToFoot(meter);
+    </script>
+</body>
+</html>
