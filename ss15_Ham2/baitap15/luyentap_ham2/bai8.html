@@ -11,20 +11,21 @@
                 let a = prompt('Nhập phần tử thứ ' + (j + 1) + ' vào mảng')
                 arr.push(a);
             }
-            document.write("mảng vừa nhập là " + arr + "<br>");
+            document.write("Mảng vừa nhập là " + arr + "<br>");
         }
         function daoMang(arr) {
-            for(let i = 0;i <= arr.length/2;i++) {
-                let temp = arr[i];
-                arr[i] = arr[arr.length-1-i];
-                arr[arr.length-1-i] = temp;
+            let arr1 = arr;
+            for(let i = 0;i <= arr1.length/2;i++) {
+                let temp = arr1[i];
+                arr1[i] = arr1[arr1.length-1-i];
+                arr1[arr1.length-1-i] = temp;
             }
-            return arr;
+            return arr1;
         }
         let arr =[];
         let n = parseInt(prompt("Nhập vào số lượng phần tử "));
         nhapMang(arr,n);
-        daoMang(arr);
+        document.write("Mảng sau khi đảo là " + daoMang(arr));
     </script>
 </body>
 </html>
