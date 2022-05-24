@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function isPalindrome(str,first, last){
+        if (first - last == 1 || first == last) return true;
+        else if (str[first] != str[last]) return false;
+        else return isPalindrome(str,first+1,last-1);
+    }
+    let string = prompt('Input a string: ');
+    document.write(isPalindrome(string, 0, string.length-1));
+</script>
 </body>
 </html>
