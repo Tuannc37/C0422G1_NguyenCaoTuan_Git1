@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập 1 xâu ký tự');
+    let arr = str.split('')
+    arr.sort()
+    for (let i = 1; i < arr.length ; i++) {
+        if (arr[i] == arr[i-1]){
+            arr.splice(i,1)
+        }
+    }
+    let result = arr.length;
+    console.log(arr)
+    console.log(result)
+</script>
+</body>
+</html>
