@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doiXung(str) {
+        let i,j;
+        for(i=0,j=str.length-1;i<str.length/2;j--,i++){
+            if(str[i]!=str[j]){
+                return false;
+            }
+            else return true;
+        }
+    }
+    let str = prompt("Nhập vào chuỗi");
+    if(doiXung(str)){
+        document.write("Chuỗi in ra đối xúng");
+    }
+    else{
+        document.write("Chuỗi in ra không đối xúng");
+    }
+</script>
+</body>
+</html>

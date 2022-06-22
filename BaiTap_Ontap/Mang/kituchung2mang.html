@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.-->
+<!--Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.-->
+<!--⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.-->
+
+<script>
+    let str = prompt("nhap chuoi 1 ");
+    let str1 = prompt("nhap chuoi 2 ");
+    let count = 0;
+    let arr2= []
+    function checkstr(str,str1) {
+        let arr = str.split("")
+        let arr1 = str1.split("")
+        document.write(arr + "<br>" + arr1 + "<br>")
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                if (arr[i] === arr1[j]) {
+                    count++
+                    arr2.push(arr[i]);
+                    arr1.splice(j, 1)
+                    arr.splice(i, 1)
+                    j--
+                }
+
+            }
+
+        }
+    }
+    checkstr(str,str1)
+    document.write( " so ky tu chung  nhau" + count +"<br>"+ arr2 );
+
+
+
+    // string.charAt(chỉ số của ký tự mà bạn muốn trích xuất)    //trích suất 1 kí tự trong chuỗi
+    //string.replace(nội dung cũ, nội dung mới)   //thay thế nội dung chuỗi
+    //var a = text.replace(/học/g, “tham khảo”);  // thay thế nội dung trùng khớp
+</script>
+
+
+</body>
+</html>

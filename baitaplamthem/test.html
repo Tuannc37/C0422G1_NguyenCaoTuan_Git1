@@ -2,9 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <button onclick="create()">Create</button>
+    <p id="display"></p>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        class AccountBank{
+            constructor(account,name,name_bank,sum_money) {
+                this.account = account;
+                this.name_bank = name_bank;
+                this.name = name;
+                this.sum_money = sum_money;
+            }
+            getAccount(){
+                return this.account;
+            }
+            getName(){
+                return this.name;
+            }
+            getName_bank(){
+                return this.name_bank;
+            }
+            getSum_money(){
+                return this.sum_money;
+            }
+            setAccount(account){
+                this.account = account;
+            }
+            setName(name){
+                this.name = name;
+            }
+            setName_bank(name_bank){
+                this.name_bank = name_bank;
+            }
+            setSum_money(sum_money){
+                this.sum_money = sum_money;
+            }
+            toString(){
+                document.write("Mã tài khoản : " + this.account + "<br>");
+                document.write("Tên chủ tài khoản : " + this.name + "<br>");
+                document.write("Tên ngân hàng : " + this.name_bank + "<br>");
+                document.write("Tổng tiền tài khoản : " + this.sum_money + "<br>");
+            }
+        };
+
+        let account_bank = new AccountBank("123",'Nguyen Cao Tuan',"ACB","1000000");
+        let account_bankArray = [account_bank];
+
+        function display(arr) {
+            let str = '<table border="1">\n' +
+                '        <tr>\n' +
+                '           <td>Mã tài khoản</td>\n' +
+                '           <td>Tên chủ tài khoản</td>\n' +
+                '           <td>Tên ngân hàng</td>\n' +
+                '          <td>Tổng tiền tài khoản</td>\n' +
+                '       </tr>\n'
+                for(let i = 0;i <arr.length; i++){
+                    str +=      '<tr>\n' +
+                        '           <td>' + arr[i].getAccount() +'</td>\n' +
+                        '           <td>' + arr[i].getName() +'</td>\n' +
+                        '           <td>' + arr[i].getName_bank() +'</td>\n' +
+                        '           <td>' + arr[i].getSum_money() +'</td>\n' +
+                        '           <td><button onclick="update('+ i +')">Update</button></td>\n' +
+                        '           <td><button onclick="remove('+ i +')">Delete</button></td>\n' +
+                        '       </tr>\n';
+                }
+            str += '</table>'
+            document.getElementById("display").innerHTML = str;
+        }
+        display(account_bankArray);
+        function create(index) {
+            let account = prompt("Nhập vào mã tài khoản  ");
+            let name = prompt('Nhập họ tên chủ tài khoản');
+            let name_bank = prompt('Nhập tên ngân hàng');
+            let sum_money = prompt('Nhập tổng số tiền trong tài khoản');
+            let new_account = new AccountBank(account,name,name_bank,sum_money);
+            account_bankArray.push(new_account);
+            display(account_bankArray);
+        }
+        function update(index) {
+            let account = prompt("Nhập vào mã tài khoản  ");
+            let name = prompt('Nhập họ tên chủ tài khoản');
+            let name_bank = prompt('Nhập tên ngân hàng');
+            let sum_money = prompt('Nhập tổng số tiền trong tài khoản');
+            account_bankArray[index].setAccount(account)
+            account_bankArray[index].setName(name);
+            account_bankArray[index].setName_bank(name_bank);
+            account_bankArray[index].setSum_money(sum_money);
+            display(account_bankArray);
+        }
+        function remove(index) {
+            if (confirm('Bạn thật sự muốn xóa?')){
+                account_bankArray.splice(index,1)
+            }
+            display(account_bankArray)
+        }
+    </script>
+
 </body>
 </html>

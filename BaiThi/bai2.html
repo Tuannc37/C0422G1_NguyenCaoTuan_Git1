@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiemTraSoHoanHao(n) {
+            let sum = 0;
+            for(let i = 1; i < n;i++){
+                if(n % i == 0){
+                    sum += i;
+                }
+            }
+            if(n == sum){
+                return true;
+            }
+            else return false;
+        }
+
+        let number = parseInt(prompt("Nhập vào một số nguyên dương "));
+        document.write(kiemTraSoHoanHao(number));
+    </script>
+</body>
+</html>

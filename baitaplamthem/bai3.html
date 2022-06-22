@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        function fibonacci(n) {
+            if(n < 0)  return false;
+            else if(n == 0 || n == 1) return n;
+            else return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+        function nhapMang(n) {
+            for(let i = 0; i < n; i++){
+                let str = prompt("Nhập vào phần tử thứ a[" + i + "]");
+                arr.push(str);
+            }
+            document.write("Mảng bạn vừa nhập là <br>" + arr + "<br>");
+        }
+        // function timFibonacci(arr) {
+        //     for(let j = 0;j < arr.length;j++){
+        //         if(fibonacci(i)){
+        //             document.write(i + "<br>");
+        //         }
+        //     }
+        // }
+
+        // let arr = [];
+        let number = parseInt(prompt("Nhập số lượng phần tử mảng "));
+        // nhapMang(number);
+        for(let i = 0; i < number;i++){
+           document.write(fibonacci(i) + "<br>");
+        }
+    </script>
 </body>
 </html>

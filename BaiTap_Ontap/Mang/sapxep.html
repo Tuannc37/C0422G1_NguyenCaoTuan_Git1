@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        ///sắp xếp chuỗi tăng dần
+        let myarray = ["Kiyoshi", "Honda", "Ajinomoto", "Suzuki"];
+        myarray.sort(function(a, b) {
+            if (a < b) {
+                return -1;
+            }
+            if (a > b) {
+                return 1;
+            }
+            return 0;
+        });
+        console.log(myarray); //>[ 'Ajinomoto', 'Honda', 'Kiyoshi', 'Suzuki' ]
+
+
+        //sắp xếp số tăng dần
+
+        let myarray = [5,12,3,1,4];
+        myarray.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(myarray); //>[ 1, 3, 4, 5, 12 ]
+
+        //sắp xếp theo độ dài phần tử
+
+        let myarray = ["Kiyoshi", "Honda", "Ajinomoto", "Suzuki"];
+        myarray.sort(function(a, b) {
+            return a.length - b.length;
+        });
+        console.log(myarray); //>[ 'Honda', 'Suzuki', 'Kiyoshi', 'Ajinomoto' ]
+
+        //sắp xếp mảng theo giá trị tuyệt đối phần tử
+
+        let myarray = [-5,12,-3,1,-4];
+        myarray.sort(function(a, b) {
+            return  Math.abs(a) -  Math.abs(b);
+        });
+        console.log(myarray); //> 1, -3, -4, -5, 12 ]
+
+        //sap xep theo giam dan
+        let myarray = [5,12,3,1,4];
+        myarray.sort(function(a, b) {
+            return b - a;
+        });
+        console.log(myarray); //>[ 12, 5, 4, 3, 1 ]
+
+        //sắp xep giam dan chuoi
+
+        let myarray = ["Kiyoshi", "Honda", "Ajinomoto", "Suzuki"];
+        myarray.sort(function(a, b) {
+            if (a < b) {
+                return 1;
+            }
+            if (a > b) {
+                return -1;
+            }
+            return 0;
+        });
+        console.log(myarray); //>[[ 'Suzuki', 'Kiyoshi', 'Honda', 'Ajinomoto' ]
+
+        //dao nguoc phan tu trong mang
+
+        let org_arr = [1, 2, 3, 4, 5];
+        org_arr.sort(function() {
+            return -1;
+        })
+        console.log(org_arr); //>[ 5, 4, 3, 2, 1 ]
+
+    </script>
+</body>
+</html>

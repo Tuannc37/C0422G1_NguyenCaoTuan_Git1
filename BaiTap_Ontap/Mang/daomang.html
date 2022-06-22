@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nhapMang(arr, n){
+        for(let j = 0; j < n;j ++){
+            let a = prompt('Nhập phần tử thứ ' + (j + 1) + ' vào mảng')
+            arr.push(a);
+        }
+        document.write("Mảng vừa nhập là " + arr + "<br>");
+    }
+    function daoMang(arr) {
+        let arr1 = arr;
+        for(let i = 0;i <= arr1.length/2;i++) {
+            let temp = arr1[i];
+            arr1[i] = arr1[arr1.length-1-i];
+            arr1[arr1.length-1-i] = temp;
+        }
+        return arr1;
+    }
+    let arr =[];
+    let n = parseInt(prompt("Nhập vào số lượng phần tử "));
+    nhapMang(arr,n);
+    document.write("Mảng sau khi đảo là " + daoMang(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="create()">Create</button>
+<p id="display"></p>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<script>
+    class CongNhan{
+        constructor(sothutu,hoten,ngaysinh,diachi,luong,chucvu) {
+            this.sothutu = sothutu;
+            this.hoten = hoten;
+            this.ngaysinh = ngaysinh;
+            this.diachi = diachi;
+            this.luong = luong;
+            this.chucvu = chucvu;
+        }
+        getSothutu(){
+            return this.sothutu;
+        }
+        getHoten(){
+            return this.hoten;
+        }
+        getNgaysinh(){
+            return this.ngaysinh;
+        }
+        getDiachi(){
+            return this.diachi;
+        }
+        getLuong(){
+            return this.luong;
+        }
+        getChucvu(){
+            return this.chucvu;
+        }
+
+
+        setSothutu(sothutu){
+            this.sothutu = sothutu;
+        }
+        setHoten(hoten){
+            this.hoten = hoten;
+        }
+        setNgaysinh(ngaysinh){
+            this.ngaysinh = ngaysinh;
+        }
+        setDiachi(diachi){
+           this.diachi = diachi;
+        }
+        setLuong(luong){
+            this.luong = luong;
+        }
+        setChucvu(chucvu){
+            this.chucvu = chucvu;
+        }
+
+    };
+    let nhanvien = new CongNhan("1","Nguyễn Cao Tuấn","10/04/1994","Nghe An","50000000","Giám Đốc");
+    let nhanvienArray = [nhanvien];
+    function display(arr) {
+        let str = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <td>STT</td>\n' +
+            '        <td>Họ và tên</td>\n' +
+            '        <td>Ngày sinh</td>\n' +
+            '        <td>Địa chỉ</td>\n' +
+            '        <td>Lương</td>\n' +
+            '        <td>Chức vụ</td>\n' +
+            '    </tr>\n'
+        for (let i = 0; i < arr.length; i++) {
+            str += ' <tr>\n' +
+                '        <td>' + arr[i].getSothutu() + '</td>\n' +
+                '        <td>' + arr[i].getHoten() + '</td>\n' +
+                '        <td>' + arr[i].getNgaysinh() + '</td>\n' +
+                '        <td>' + arr[i].getDiachi() + '</td>\n' +
+                '        <td>' + arr[i].getLuong() + '</td>\n' +
+                '        <td>' + arr[i].getChucvu() + '</td>\n' +
+                '<td><button onclick="update('+i+')">Update</button></td>\n'+
+                '<td><button onclick="remove('+i+')">Delete</button></td>\n'+
+
+                '    </tr>\n';
+        }
+        str += '</table>'
+        document.getElementById('display').innerHTML = str
+    }
+    display(nhanvienArray);
+    function create() {
+        let sothutu = prompt("Nhập vào số thứ tự ");
+        let hoten = prompt('Nhập họ tên ')
+        let ngaysinh = prompt('Nhập vào ngày sinh ')
+        let diachi = prompt('Nhập vào địa chỉ ')
+        let luong = prompt('Nhập vào lương ')
+        let chucvu = prompt('Nhập vào chức vụ ')
+
+        let new_nhanvien = new CongNhan(sothutu,hoten, ngaysinh, diachi,luong,chucvu)
+        nhanvienArray.push(new_nhanvien)
+        display(nhanvienArray)
+
+    }
+    function update(index) {
+        let sothutu = prompt("Nhập vào số thứ tự ");
+        let hoten = prompt('Nhập họ tên ')
+        let ngaysinh = prompt('Nhập vào ngày sinh ')
+        let diachi = prompt('Nhập vào địa chỉ ')
+        let luong = prompt('Nhập vào lương ')
+        let chucvu = prompt('Nhập vào chức vụ ')
+
+        nhanvienArray[index].setSothutu(sothutu)
+        nhanvienArray[index].setHoten(hoten)
+        nhanvienArray[index].setNgaysinh(ngaysinh)
+        nhanvienArray[index].setDiachi(diachi)
+        nhanvienArray[index].setLuong(luong)
+        nhanvienArray[index].setChucvu(chucvu)
+        display(nhanvienArray)
+    }
+    function remove(index) {
+        if (confirm('Bạn thật sự muốn xóa?')){
+            nhanvienArray.splice(index,1)
+        }display(nhanvienArray)
+    }
+
+</script>
+</body>
+</html>

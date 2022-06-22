@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let number = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) + ' vào mảng '));
+        arr.push(number)
+    }
+    console.log(arr)
+    let j;
+    let maxValue, viTri;
+    maxValue = arr[0];
+    for(j = 0; j < arr.length; j++){
+        if(arr[j] > maxValue){
+            maxValue = arr[j];
+            viTri = j;
+        }
+    }
+    console.log("Phần tử có giá trị lớn nhất trong mảng là arr["+ viTri + "]");
+    console.log("vị trí số lớn nhất trong mảng là : " + viTri);
+</script>
+</body>
+</html>

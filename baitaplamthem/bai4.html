@@ -2,9 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        class AccountBank{
+            constructor(account,name,name_bank,sum_money) {
+                this.account = account;
+                this.name_bank = name_bank;
+                this.name = name;
+                this.sum_money = sum_money;
+            }
+            getAccount(){
+                return this.account;
+            }
+            getName(){
+                return this.name;
+            }
+            getName_bank(){
+                return this.name_bank;
+            }
+            getSum_money(){
+                return this.sum_money;
+            }
+            setAccount(account){
+                this.account = account;
+            }
+            setName(name){
+                this.name = name;
+            }
+            setName_bank(name_bank){
+                this.name_bank = name_bank;
+            }
+            setSum_money(sum_money){
+                this.sum_money = sum_money;
+            }
+            toString(){
+                document.write("Mã tài khoản : " + this.account + "<br>");
+                document.write("Tên chủ tài khoản : " + this.name + "<br>");
+                document.write("Tên ngân hàng : " + this.name_bank + "<br>");
+                document.write("Tổng tiền tài khoản : " + this.sum_money + "<br>");
+            }
+        };
+        // function kiemTraSo(str)
+        // {
+        //     for(let i = 0;i < str.length;i++)
+        //     {
+        //         for(let  j = 48;j <= 57;j++)
+        //         {
+        //             if(str[i]==j) return true;
+        //
+        //         }
+        //     }
+        //     return false;
+        // }
+
+        function hienThi() {
+            let number = parseInt(prompt("Nhập vào số lượng khách hàng"));
+            for (let i = 1; i <= number;i++){
+                let account_bank = new AccountBank("M123","Nguyễn Cao Tuấn","Viettinbank","1000000");
+                let account;
+                do{
+                    account = prompt("Nhập vào mã tài khoản " + i + " : ");
+                    if(Number.isNaN(account) == true){
+                        alert("Bạn đã nhập sai.Vui lòng nhập lại!");
+                        break;
+                    }
+                    else if(account.length != 5){
+                        alert("Bạn đã nhập sai.Vui lòng nhập lại!");
+                        break;
+                    }
+                    // for(let j = 0; j < account.length;j++){
+                    //     if((kiemTraSo(account[j]) == false) || (account.length != 5)){
+                    //        alert("Bạn đã nhập sai.Vui lòng nhập lại!");
+                    //        break;
+                    //     }
+                    // }
+                }while(account.length != 5)
+                let name = prompt("Nhập vào tên chủ tài khoản " + i + " : ");
+                let name_bank = prompt("Nhập vào Tên ngân hàng " + i + " : ");
+                let sum_money = prompt("Nhập vào tổng tiền tài khoản " + i + " : ");
+                account_bank.setAccount(account);
+                account_bank.setName(name);
+                account_bank.setName_bank(name_bank);
+                account_bank.setSum_money(sum_money);
+                document.write("-----THÔNG TIN TAI KHOAN " + i + "-----<br>");
+                account_bank.toString();
+                document.write("<br>");
+                document.write("<br>");
+            }
+        }
+        hienThi();
+
+    </script>
 </body>
 </html>

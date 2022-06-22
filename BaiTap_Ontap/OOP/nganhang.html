@@ -65,34 +65,34 @@
             '        <td>Tên ngân hàng : </td>\n' +
             '        <td>Tổng tiền tài khoản :</td>\n' +
             '    </tr>\n'
-            for (let i = 0; i < arr.length; i++) {
-                str += ' <tr>\n' +
-                    '        <td>' + arr[i].getAccount() + '</td>\n' +
-                    '        <td>' + arr[i].getName() + '</td>\n' +
-                    '        <td>' + arr[i].getName_bank() + '</td>\n' +
-                    '        <td>' + arr[i].getSum_money() + '</td>\n' +
-                    '<td><button onclick="update('+i+')">Update</button></td>\n'+
-                    '<td><button onclick="remove('+i+')">Delete</button></td>\n'+
+        for (let i = 0; i < arr.length; i++) {
+            str += ' <tr>\n' +
+                '        <td>' + arr[i].getAccount() + '</td>\n' +
+                '        <td>' + arr[i].getName() + '</td>\n' +
+                '        <td>' + arr[i].getName_bank() + '</td>\n' +
+                '        <td>' + arr[i].getSum_money() + '</td>\n' +
+                '<td><button onclick="update('+i+')">Update</button></td>\n'+
+                '<td><button onclick="remove('+i+')">Delete</button></td>\n'+
 
-                    '    </tr>\n';
-            }
+                '    </tr>\n';
+        }
         str += '</table>'
         document.getElementById('display').innerHTML = str
     }
     display(account_bankArray);
     function create() {
         let account;
-                do{
-                    account = prompt("Nhập vào mã tài khoản  ");
-                    if(Number.isNaN(account) == true){
-                        alert("Bạn đã nhập sai.Vui lòng nhập lại!");
-                        break;
-                    }
-                    else if(account.length != 5){
-                        alert("Bạn đã nhập sai.Vui lòng nhập lại!");
-                        break;
-                    }
-                }while(account.length != 5)
+        do{
+            account = prompt("Nhập vào mã tài khoản  ");
+            if(Number.isNaN(account) == true){
+                alert("Bạn đã nhập sai.Vui lòng nhập lại!");
+                break;
+            }
+            else if(account.length != 5){
+                alert("Bạn đã nhập sai.Vui lòng nhập lại!");
+                break;
+            }
+        }while(account.length != 5)
         let name = prompt('Nhập họ tên chủ tài khoản')
         let name_bank = prompt('Nhập tên ngân hàng')
         let sum_money = prompt('Nhập tổng số tiền trong tài khoản')

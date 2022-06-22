@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function UCLN(a,b)
+        {
+            while ( a != b)
+            {
+                if (a > b)
+                    a = a - b;
+                else
+                    b = b - a;
+            }
+
+            return a;
+        }
+        function BCNN(a,b)
+        {
+            let result = UCLN(a, b);
+            return a * b / result;
+        }
+
+        let a = parseInt(prompt("Nhập vào giá trị a"));
+        let b = parseInt(prompt("Nhập vào giá trị b "));
+        document.write("Ước chung lớn nhất của 2 số là " + UCLN(a,b) + "<br>");
+        document.write("Bội chung nhỏ nhất của 2 số là " + BCNN(a,b));
+    </script>
+</body>
+</html>

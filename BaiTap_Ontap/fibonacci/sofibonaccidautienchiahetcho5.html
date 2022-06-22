@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const number = parseInt(prompt('Enter the number of terms: '));
+    let n1 = 0, n2 = 1, nextTerm;
+    let count = 0;
+    for (let i = 1; i <= number; i++) {
+        if(i % 5 == 0){
+            count++;
+            if(count == 1){
+                document.write("Số đầu tiên trong dãy fibonacci chia hết cho 5 là :" + i);
+            }
+        }
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+
+</script>
+</body>
+</html>

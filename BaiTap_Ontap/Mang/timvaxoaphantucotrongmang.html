@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let number = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) + ' vào mảng '));
+        arr.push(number)
+    }
+    document.write("Mảng gốc " + arr + "<br>")
+    let number = parseInt(prompt("Nhập vào số nguyên"));
+    document.write("Số mới nhập vào là :" + number + "<br>");
+    let viTri;
+    for (let i = 0; i < arr.length; i++){
+        if(number == arr[i]){
+            viTri = i;
+            for(let i = viTri; i < arr.length - 1; i++){
+                arr[i] = arr[i+1];
+            }
+            --arr.length;
+        }
+    }
+    document.write("Mang sau khi xoa la " + arr);
+</script>
+</body>
+</html>

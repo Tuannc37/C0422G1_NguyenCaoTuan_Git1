@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let str = prompt('nhập xâu kí tự')
+    let arr = str.split('')
+    let arr1 = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr1.indexOf(arr[i]) === -1) {    //hàm indexoff() in kí tư đầu tiên được tìm thấy
+            arr1.push(arr[i])
+        }
+    }
+    document.write('arr = [ ' + arr + ' ] <br>')
+    document.write('có ' + arr1.length + ' kí tự khác nhau là : ' + arr1)
+</script>
+</body>
+</html>

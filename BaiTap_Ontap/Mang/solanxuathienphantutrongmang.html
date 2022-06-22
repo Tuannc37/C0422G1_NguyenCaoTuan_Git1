@@ -14,32 +14,19 @@
     }
     document.write("Mảng bạn vừa nhập là " + arr +"<br>");
     arr.sort();
+    document.write("Mảng sau khi sắp xếp là " + arr +"<br>");
     let count = 1;
-    let flag = true;
-    let arr1 = [];
     for(let j = 0;j < arr.length; j++){
         if (arr[j] == arr[j+1]){
             count++;
-            arr1.push(count);
         }
         else{
+            document.write("Phan tu " +arr[j]+ " xuat hien" +count+ " lan <br>");
             count = 1;
         }
     }
-    document.write(arr1 + "<br>")
-    function kiemTra() {
-        let count1 = 1;
-        for(let i = 0; i < arr1.length;i++){
-            if(arr1[i] != arr1[i+1]){
-                count1 ++;
-            }
-        }
-        if(count1 == arr1.length){
-            return true;
-        }
-        else return false;
-    }
-    kiemTra();
+    document.write("Phan tu " +arr[j]+ " xuat hien" +count+ " lan <br>");
+
 </script>
 </body>
 </html>

@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+       function nhapMang(n) {
+            for(let i = 0;i < n;i++){
+                let str = prompt("nhập vào phần tử " + i +" vao mảng");
+                arr.push(str);
+            }
+            document.write("Mảng bạn vừa nhập là " + arr + "<br>");
+       }
+
+      function tinhTrungbinh() {
+          let count = 0;
+          let sum = 0;
+          for(let j = 0; j < arr.length;j++) {
+              if (j % 3 == 0 && arr[j] % 5 == 0) {
+                  sum += parseInt(arr[j]);
+                  count ++;
+                  document.write(arr[j] + "<br>");
+                  break;
+              }
+          }
+          if(count == 0){
+              document.write("Mảng không có số nào thỏa mãn");
+          }
+          else {
+              document.write("Sum = " + sum + "<br>");
+              document.write("Count = " + count + "<br>");
+              document.write("Trung bình mảng mới " + sum/count);
+          }
+      }
+       let arr = [];
+       let number
+       do {
+           number = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+           if(number > 50){
+               alert("bạn đã nhập sai.Vui lòng nhập lại");
+           }
+       }while(number > 50)
+       nhapMang(number);
+       tinhTrungbinh();
+    </script>
 </body>
 </html>

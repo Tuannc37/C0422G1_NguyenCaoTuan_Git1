@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let str = prompt("Nhập vào chuỗi ");
+        document.write("Chuỗi mới nhập vào là <br>" + str + "<br>");
+        let arr = str.split(" ");
+        let count = 0;
+        for(let i = 0;i < arr.length;i++){
+            count ++;
+        }
+        if(count == 1){
+            document.write("Chuỗi chỉ có duy nhất một từ nên không cần viết tắt");
+        }
+        else if(count >= 2){
+            for(let i = 0;i < arr.length;i++){
+                let arr1 = arr[i];
+                for(let j = 0;j < arr1.length;j++){
+                    if(arr1[j] == arr1[0]){
+                        document.write(arr1[j].toUpperCase());
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

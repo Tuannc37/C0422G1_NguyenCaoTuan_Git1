@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function nhapMang(arr, n){
+            for(let j = 0; j < n;j ++){
+                let a = prompt('Nhập phần tử thứ ' + (j + 1) + ' vào mảng')
+                arr.push(a);
+            }
+            document.write("Mảng vừa nhập là " + arr + "<br>");
+        }
+
+        function fibonacci(n) {
+            if (n < 0) {
+                return false;
+            } else if (n == 0 || n == 1) {
+                return n;
+            } else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        }
+
+        function timFibonacciTrongmang(arr){
+            let maxValue, viTri;
+            maxValue = arr[0];
+            for(let j = 0; j < arr.length; j++){
+                if(arr[j] > maxValue){
+                    maxValue = arr[j];
+                    viTri = j;
+                }
+            }
+            let arr1 = [];
+            for(let j = 0; j < arr.length; j++){
+               for(let k = 0;k < max;k++){
+                    if(fibonacci(k)){
+                        if(fibonacci(k) == arr[j]){
+                           arr1.push(arr[j]);
+                        }
+                    }
+               }
+            }
+            return arr1;
+
+        }
+        let arr = [];
+        let number = parseInt(prompt("Nhập vào số lượng phần tử mảng"));
+        nhapMang(arr,number);
+        document.write("Những số fibonacci có trong mang la " + timFibonacciTrongmang(arr));
+
+    </script>
+</body>
+</html>

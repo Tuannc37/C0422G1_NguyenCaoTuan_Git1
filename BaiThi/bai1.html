@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nhapMang(n) {
+        for(let i = 0;i < n;i++){
+            let str = prompt("nhập vào phần tử " + i +" vao mảng");
+            arr.push(str);
+        }
+        document.write("Mảng bạn vừa nhập là " + arr + "<br>");
+    }
+
+    function tinhTrungbinh() {
+        let sum = 0;
+        let count = 0;
+        for(let j = 0; j < arr.length;j++) {
+            if (arr[j] % 3 == 0) {
+                sum += parseInt(arr[j]);
+                count ++;
+            }
+        }
+        let trungBinh = sum/count;
+        document.write("Tổng trung bình cộng các số chia hết cho 3 có trong mảng là : " + trungBinh.toFixed(2));
+    }
+    let arr = [];
+    let number
+    do {
+        number = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+        if(number > 50){
+            alert("bạn đã nhập sai.Vui lòng nhập lại");
+        }
+    }while(number > 50)
+    nhapMang(number);
+    tinhTrungbinh();
+</script>
+</body>
+</html>

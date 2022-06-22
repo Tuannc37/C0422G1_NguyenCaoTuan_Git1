@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        function nhapMang(arr,n) {
+            for(let i = 0;i < n;i++){
+                let str = prompt("Nhập vào phần tử thứ " + i);
+                arr.push(str);
+            }
+            document.write("Mảng bạn vừa nhập là <br>" + arr + "<br>");
+        }
+        let arr = [];
+        let number = parseInt(prompt("Nhập số lượng phần tử mảng "));
+        nhapMang(arr,number);
+        document.write("Mảng mới là " + arr1 + "<br>");
+        function prefixSums(a){
+            result=[];
+            let sum=a[0];
+            result.push(a[0]);
+            for (let i=1;i<a.length;i++){
+                sum+=a[i];
+                result.push(sum);
+            }
+            return result;
+        }
+    </script>
 </body>
 </html>
